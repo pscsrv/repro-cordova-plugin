@@ -41,6 +41,8 @@
 
     <!-- android -->
     <platform name="android">
+        <preference name="GCM_VERSION" default="7.0.0"/>
+
         <hook type="before_plugin_install" src="src/android/before_plugin_install_hook.js" />
         <hook type="after_prepare" src="src/android/after_prepare_hook.js" />
 
@@ -63,7 +65,7 @@
         <source-file src="src/android/StandardEventPropertiesFactory.java" target-dir="src/io/repro/cordova" />
         <resource-file src="src/android/repro-android-sdk.aar" target="libs/repro-android-sdk.aar" />
 
-        <framework src="com.google.android.gms:play-services-gcm:7.0.0" />
+        <framework src="com.google.android.gms:play-services-gcm:$GCM_VERSION" />
         <framework src="src/android/repro-android-sdk.gradle" custom="true" type="gradleReference" />
 
     </platform>
